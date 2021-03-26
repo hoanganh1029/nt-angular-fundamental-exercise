@@ -1,0 +1,27 @@
+.quantity-component {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 1000;
+  font-size: 1rem;
+  border: var(--grey-color) 1px solid;
+}
+button {
+  outline: none;
+  border: none;
+  padding: 0.2rem 0.9rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #e0d5d5;
+}
+input {
+  border: none;
+  text-align: center;
+  width: 2rem;
+}
+
+input:focus {
+  outline: none;
+}

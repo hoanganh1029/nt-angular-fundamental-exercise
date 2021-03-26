@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'nt-training-final-exercise';
+  title = 'Final Excercise';
+  isShowProfile: boolean=true;
+  
+  toggleProfile(isShowProfile: boolean):void{
+    console.log(isShowProfile);
+    this.isShowProfile = isShowProfile;
+  }
 }

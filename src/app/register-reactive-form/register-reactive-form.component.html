@@ -1,0 +1,89 @@
+<div id="register">
+  <header>
+    <h1 id="title">Register Form</h1>
+    <p id="description">Please fill out your information</p>
+  </header>
+  <main>
+    <form id="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label id="name-label" for="name">Name *</label>
+        <input type="text" id="name" required minlength="6" maxlength="32" class="form-control"
+          placeholder="Enter your name" formControlName="name" />
+        <div *ngIf="(formControl.name.touched || isSubmited) && !formControl.name.valid">
+          <span class="invalid-input" *ngIf="formControl.name.errors?.required">Name is required</span>
+          <span class="invalid-input"
+            *ngIf="formControl.name.errors?.minlength || formControl.name.errors?.maxlength">Length from 6 to 32
+            characters</span>
+          <span class="invalid-input"
+            *ngIf="!(formControl.name.errors?.minlength || formControl.name.errors?.maxlength) && formControl.name.errors?.pattern">Name
+            must contain only alphabet</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email *</label>
+        <input type="email" id="email" required class="form-control" placeholder="Enter your email"
+          formControlName="email" />
+        <div *ngIf="(formControl.email.touched || isSubmited)&& !formControl.email.valid">
+          <span class="invalid-input" *ngIf="formControl.email.errors?.required">Email is required</span>
+          <span class="invalid-input" *ngIf="formControl.email.errors?.email">Email is invalid</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Password *</label>
+        <input type="password" id="password" required class="form-control" placeholder="Enter password"
+          formControlName="password" />
+        <div *ngIf="(formControl.password.touched || isSubmited) && !formControl.password.valid">
+          <span class="invalid-input" *ngIf="formControl.password.errors?.required">Password is required</span>
+          <span class="invalid-input"
+            *ngIf="formControl.password.errors?.minlength || formControl.password.errors?.maxlength">Length from 8 to 32
+            characters</span>
+          <span class="invalid-input"
+            *ngIf="!(formControl.password.errors?.minlength || formControl.password.errors?.maxlength) && formControl.password.errors?.pattern">Must
+            contain alphabet, digit and at least one of !@#$%^&*</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm password *</label>
+        <input type="password" id="confirm-password" required class="form-control" placeholder="Re-enter your password"
+          formControlName="confirmPassword" />
+        <div *ngIf="(formControl.confirmPassword.touched || isSubmited) && !formControl.confirmPassword.valid">
+          <span class="invalid-input" *ngIf="formControl.confirmPassword.errors?.required">Confirm password is
+            required</span>
+          <span class="invalid-input"
+            *ngIf="formControl.confirmPassword.errors?.minlength || formControl.confirmPassword.errors?.maxlength">Length
+            from 8 to 32 characters</span>
+          <span class="invalid-input"
+            *ngIf="!(formControl.confirmPassword.errors?.minlength || formControl.confirmPassword.errors?.maxlength) && formControl.confirmPassword.errors?.pattern">Must
+            contain alphabet, digit and at least one of !@#$%^&*</span>
+          <span class="invalid-input" *ngIf="formControl.confirmPassword.errors?.mustEqual">Confirm password must equal
+            password</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Age</label>
+        <input type="number" id="number" min="10" max="100" class="form-control" placeholder="Age"
+          formControlName="age" />
+      </div>
+      <div class="form-group">
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select type="text" id="dropdown" class="form-control" formControlName="role">
+          <option disabled selected value>Select curent role</option>
+          <option value="student">Student</option>
+          <option value="job">Full Time Job</option>
+          <option value="learner">Full Time Learner</option>
+          <option value="preferNo">Prefer not to stay</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button id="submit" type="submit" class="form-control button-submit">
+          Register
+        </button>
+      </div>
+      <!-- <pre>{{ registerForm.value | json }}</pre>
+      <pre>{{formControl.name.touched | json}}</pre>
+      <pre>{{formControl.name.valid | json}}</pre> -->
+    </form>
+  </main>
+</div>

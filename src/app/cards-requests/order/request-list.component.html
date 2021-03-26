@@ -1,0 +1,29 @@
+<div id="request-list">
+  <nz-table #orderTable [nzData]="orders" nzTableLayout="fixed" [nzPageSize]="6">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Subject</th>
+        <th>Request Date</th>
+        <th>Latest Update</th>
+        <th>Staus</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orderTable.data">
+        <td>{{ order.id }}</td>
+        <td>{{ order.subject }}</td>
+        <td>{{ order.requestDate | date:'longDate'}}</td>
+        <td>{{ order.latestUpdate | date:'longDate'}}</td>
+        <td>{{ order.statusName }}</td>
+        <td>
+          <a routerLink="/order/{{order.id}}">Open</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a nz-popconfirm nzPopconfirmTitle="Are you sure delete this order?" nzPopconfirmPlacement="bottom"
+            (nzOnConfirm)="deleteOrder(order.id)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

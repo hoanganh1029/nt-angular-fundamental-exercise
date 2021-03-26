@@ -1,0 +1,38 @@
+#profile {
+  display        : flex;
+  min-height     : 70vh;
+  justify-content: center;
+  align-items    : center;
+}
+
+[nz-form] {
+  max-width       : 600px;
+  flex            : 1;
+  height          : 500px;
+  padding         : 20px 10px 0px 20px;
+  background-color: white;
+  border-radius   : 10px;  
+  h1{
+    text-align: center;
+    margin-bottom: 17px;
+  }
+}
+
+.phone-select {
+  width: 70px;
+}
+
+.register-are {
+  margin-bottom: 8px;
+}
+
+nz-form-label {
+  text-align: left;
+}
+
+button {
+  margin-right : 10px;
+  width        : 8rem;
+  height       : 35px;
+  border-radius: 5px;
+}

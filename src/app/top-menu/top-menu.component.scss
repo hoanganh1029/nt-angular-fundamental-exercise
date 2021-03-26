@@ -1,0 +1,47 @@
+#top-menu {
+   background-color: #FEFEFE;
+   height          : 3.5rem;
+   display         : flex;
+   justify-content : flex-end;
+   align-items     : center;
+   padding-right   : 5vw;
+
+   img {
+      object-fit   : contain;
+      height       : 2.5rem;
+      border-radius: 50%;
+   }
+
+   i {
+      font-size: 2rem;
+      color    : #dec1fa;
+   }
+}
+
+.top-menu-item {
+   height: 100%;
+
+   button {
+      display         : flex;
+      height          : 100%;
+      width           : 4rem;
+      align-items     : center;
+      justify-content : center;
+      border          : none;
+      cursor          : pointer;
+      background-color: #FEFEFE;
+   }
+}
+
+.top-menu-item button:hover {
+   background-color: #f7eeee;
+}
+
+.top-menu-item button:focus {
+   outline   : none;
+   box-shadow: 0 0 0 0 transparent;
+}
+
+.button-focus {
+   background-color: #ebe3e3 !important;
+}

@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <button nz-button nzType="primary" (click)="toggleCollapsed()">
+    <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+  </button>
+  <ul nz-menu nzMode="inline" nzTheme="light" [nzInlineCollapsed]="isCollapsed">
+    <li nz-menu-item nz-tooltip nzTooltipPlacement="right" nzMatchRouter="true"
+      [nzTooltipTitle]="isCollapsed ? 'Dashboard' : ''">
+      <a routerLink="/dashboard"><i nz-icon nzType="mail"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li nz-submenu nzTitle="Form" nzIcon="appstore" nzOpen>
+      <ul>
+        <li nz-menu-item nzMatchRouter="true">
+          <a routerLink="/register-reactive">Reactive</a>
+        </li>
+        <li nz-menu-item nzMatchRouter="true">
+          <a routerLink="/register-driven">Template Driven</a>
+        </li>
+      </ul>
+    </li>
+    <li nz-menu-item nz-tooltip nzTooltipPlacement="right" nzMatchRouter="true"
+      [nzTooltipTitle]="isCollapsed ? 'Cart' : ''">
+      <a routerLink="/cart">
+        <i nz-icon nzType="shopping-cart"></i>
+        <span>Cart</span>
+      </a>
+    </li>
+    <li nz-menu-item nz-tooltip nzTooltipPlacement="right" nzMatchRouter="true"
+      [nzTooltipTitle]="isCollapsed ? 'Account' : ''">
+      <a routerLink="/account">
+        <i nz-icon nzType="user"></i>
+        <span>Account</span>
+      </a>
+    </li>
+  </ul>
+</div>

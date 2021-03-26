@@ -1,0 +1,208 @@
+<div id="register">
+  <header>
+    <h1 id="title">Register Form</h1>
+    <p id="description">Please fill out your information</p>
+  </header>
+  <main>
+    <form id="register-form" #registerForm="ngForm" (submit)="onSubmit(registerForm)">
+      <div class="form-group">
+        <label id="name-label" for="name">Name *</label>
+        <input type="text" id="name" required minlength="6" maxlength="32" class="form-control"
+          placeholder="Enter your name" name="name" [(ngModel)]="userInfo.name" #name="ngModel"
+          [pattern]="userNamePattern" />
+        <div *ngIf="(name.touched || isSubmited) && !name.valid">
+          <span class="invalid-input" *ngIf="name.errors?.required">Name is required</span>
+          <span class="invalid-input" *ngIf="name.errors?.minlength || name.errors?.maxlength">Length from 6 to 32
+            characters</span>
+          <span class="invalid-input"
+            *ngIf="!(name.errors?.minlength || name.errors?.maxlength) && name.errors?.pattern">Name must contain only
+            alphabet</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email *</label>
+        <input type="email" id="email" required class="form-control" placeholder="Enter your email" name="email"
+          [(ngModel)]="userInfo.email" #email="ngModel" [pattern]="emailPattern" />
+        <div *ngIf="(email.touched || isSubmited) && !email.valid">
+          <span class="invalid-input" *ngIf="email.errors?.required">Email is required</span>
+          <span class="invalid-input" *ngIf="email.errors?.pattern">Email is invalid</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Password *</label>
+        <input type="password" id="password" required class="form-control" placeholder="Enter password" name="password"
+          minlength="8" maxlength="32" [(ngModel)]="userInfo.password" #password="ngModel"
+          [pattern]="passwordPattern" />
+        <div *ngIf="(password.touched || isSubmited) && !password.valid">
+          <span class="invalid-input" *ngIf="password.errors?.required">Password is required</span>
+          <span class="invalid-input" *ngIf="password.errors?.minlength || password.errors?.maxlength">Length from 8 to
+            32 characters</span>
+          <span class="invalid-input"
+            *ngIf="!(password.errors?.minlength || password.errors?.maxlength) && password.errors?.pattern">Must contain
+            alphabet, digit and at least one of !@#$%^&*</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm password *</label>
+        <input type="password" id="confirm-password" required class="form-control" placeholder="Re-enter your password"
+          name="confirmPassword" minlength="8" maxlength="32" [(ngModel)]="userInfo.confirmPassword"
+          #confirmPassword="ngModel" [pattern]="passwordPattern" />
+        <div *ngIf="(confirmPassword.touched || isSubmited) && !confirmPassword.valid">
+          <span class="invalid-input" *ngIf="confirmPassword.errors?.required">Confirm password is required</span>
+          <span class="invalid-input"
+            *ngIf="confirmPassword.errors?.minlength || confirmPassword.errors?.maxlength">Length from 8 to 32
+            characters</span>
+          <span class="invalid-input"
+            *ngIf="!(confirmPassword.errors?.minlength || confirmPassword.errors?.maxlength) && confirmPassword.errors?.pattern">Must
+            contain alphabet, digit and at least one of !@#$%^&*</span>
+          <span class="invalid-input"
+            *ngIf="!(confirmPassword.errors?.minlength || confirmPassword.errors?.maxlength || confirmPassword.errors?.pattern) && (userInfo.password !== confirmPassword.value)">Confirm
+            password must equal password.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Age</label>
+        <input type="number" id="number" min="10" max="100" class="form-control" placeholder="Age"
+          [(ngModel)]="userInfo.age" name="age" />
+      </div>
+      <div class="form-group">
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select type="text" id="dropdown" class="form-control" [(ngModel)]="userInfo.role" name="role">
+          <option disabled selected value="default">Select curent role</option>
+          <option value="student">Student</option>
+          <option value="job">Full Time Job</option>
+          <option value="learner">Full Time Learner</option>
+          <option value="preferNo">Prefer not to stay</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <!-- 
+      <div class="form-group">
+        <label>Would you recommend to a friend?</label>
+        <label for="rdo-definitely">
+          <input type="radio" id="rdo-definitely" value="1" name="recommend" />
+          Definitely
+        </label>
+        <label for="rdo-maybe">
+          <input type="radio" id="rdo-maybe" value="2" name="recommend" />Maybe
+        </label>
+        <label for="rdo-notSure">
+          <input type="radio" id="rdo-notSure" value="3" name="recommend" />Not
+          sure
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="feature">What is your favorite feature?</label>
+        <select type="text" id="feature" name="feature" class="form-control">
+          <option disabled selected value>Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="openSource">Open Source</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="field"
+          >What would you like to see improved? (Check all that apply)</label
+        >
+        <label for="frontend">
+          <input type="checkbox" id="frontend" value="frontend" name="prefer" />
+          Front-end Projects
+        </label>
+        <label for="backend">
+          <input type="checkbox" id="backend" value="backend" name="prefer" />
+          Back-end Projects
+        </label>
+        <label for="dataVisualization">
+          <input
+            type="checkbox"
+            id="dataVisualization"
+            value="dataVisualization"
+            name="prefer"
+          />
+          Data Visualization
+        </label>
+        <label>
+          <input
+            name="prefer"
+            value="challenges"
+            type="checkbox"
+            class="input-checkbox"
+          />Challenges
+        </label>
+        <label>
+          <input
+            name="prefer"
+            value="open-source-community"
+            type="checkbox"
+            class="input-checkbox"
+          />Open Source Community
+        </label>
+        <label>
+          <input
+            name="prefer"
+            value="gitter-help-rooms"
+            type="checkbox"
+            class="input-checkbox"
+          />Gitter help rooms
+        </label>
+        <label>
+          <input
+            name="prefer"
+            value="videos"
+            type="checkbox"
+            class="input-checkbox"
+          />Videos
+        </label>
+        <label>
+          <input
+            name="prefer"
+            value="city-meetups"
+            type="checkbox"
+            class="input-checkbox"
+          />City Meetups
+        </label>
+        <label>
+          <input
+            name="prefer"
+            value="wiki"
+            type="checkbox"
+            class="input-checkbox"
+          />Wiki
+        </label>
+        <label>
+          <input
+            name="prefer"
+            value="forum"
+            type="checkbox"
+            class="input-checkbox"
+          />Forum
+        </label>
+        <label>
+          <input
+            name="prefer"
+            value="additional-courses"
+            type="checkbox"
+            class="input-checkbox"
+          />Additional Courses
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="comment">Any comments or suggestions?</label>
+        <textarea
+          id="comment"
+          class="form-control text-area"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </div> -->
+      <div class="form-group">
+        <button id="submit" type="submit" class="form-control button-submit">
+          Register
+        </button>
+      </div>
+
+      <!-- <pre>{{ registerForm.value | json }}</pre>-->
+      <pre>{{ userInfo | json }}</pre>
+    </form>
+  </main>
+</div>

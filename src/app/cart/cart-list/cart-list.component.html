@@ -1,0 +1,15 @@
+<h2>Cart <span class="quantity-items">{{products.length}} ITEMS</span></h2>
+<div *ngFor="let product of products;index as index; last as last">
+  <cart-detail
+    [product]="product"
+    (updateAmount)="onUpdateTotalPrice($event)"
+    (removeProduct)="removeProduct($event)"
+  >
+  </cart-detail>
+  <hr *ngIf="!last" />
+</div>
+<div *ngIf="products.length > 0" class="discount-info">
+  <p>
+    10% instant Discount with Federal Bank Debit Cards on a min spend of $150
+  </p>
+</div>

@@ -1,0 +1,12 @@
+<div id="top-menu">
+  <div class="top-menu-item">
+    <button><i nz-icon nzType="bell" nzTheme="outline"></i></button>
+  </div>
+  <div class="top-menu-item">
+    <button><i nz-icon nzType="mail" nzTheme="outline"></i></button>
+  </div>
+  <div class="top-menu-item">
+    <button (click)="toggleProfile()" [class]="isShowProfile ? 'button-focus' : ''">
+      <img src="https://pluspng.com/img-png/ironman-png-800.png" /></button>
+  </div>
+</div>

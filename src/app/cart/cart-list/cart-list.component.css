@@ -1,0 +1,15 @@
+.quantity-items {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  color: var(--grey-color);
+}
+.discount-info {
+  font-size: 0.9rem;
+  border: solid 1px var(--grey-color);
+  padding: 0.7rem;
+  background-color: rgb(235, 246, 245);
+}
+
+p{
+  margin-bottom: 0;
+}

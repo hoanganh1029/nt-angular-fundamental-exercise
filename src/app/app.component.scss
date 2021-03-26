@@ -1,0 +1,49 @@
+* {
+   font-family: 'Poppins','Roboto', sans-serif;
+   font-size: 1rem;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   --grey-color: #babac4;
+}
+$btn-borderColor: #bfbfc9;
+
+main{
+   display: flex;   
+   background-color: #e7e7ef;
+}
+
+left-menu {
+   background-color: #FEFEFE;      
+}
+
+#container{
+   display:flex;     
+   flex-direction: column; 
+   width: 100%;
+   min-height: 100vh;
+}
+
+#content{
+   display: flex;   
+   flex:1;
+}
+#main-content{
+   display: flex;
+   flex-direction: column;   
+   flex: 1;
+}
+request-list {
+   background-color:#e7e7ef;
+   flex:1;   
+}
+register-reactive-form {
+   display: flex;
+   flex: 1;
+}
+
+profile{   
+   width: 20vw;
+   background-color: #FEFEFE;
+   border-top: solid 0.5px $btn-borderColor;
+}

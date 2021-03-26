@@ -1,0 +1,18 @@
+.cart-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fefefe;
+  font-family: Lato;
+  max-width: 1100px;
+}
+
+cart-list {
+  flex: 1;
+  margin-right: 2.5rem;
+}
+
+cart-list div hr:last-of-type {
+  display: none;
+}

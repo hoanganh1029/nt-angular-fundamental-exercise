@@ -1,0 +1,4 @@
+<div class="cart-container">
+  <cart-list (updateTotalPrice)="onUpdateTotalPrice($event)"></cart-list>
+  <cart-order-summary [totalPrice]="totalPrice"></cart-order-summary>
+</div>

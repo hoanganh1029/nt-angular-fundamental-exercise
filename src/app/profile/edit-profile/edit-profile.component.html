@@ -1,0 +1,59 @@
+<div id="profile">   
+   <form nz-form [formGroup]="profileForm" (ngSubmit)="submitForm()">
+      <h1>Profile</h1>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Name</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input name">
+            <input nz-input formControlName="name" id="name" />
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="avatar" nzRequired>Avatar</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input avatar link">
+            <input nz-input id="avatar" formControlName="avatar" />
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="birthday" nzRequired>
+            <span>Date of birth</span>
+         </nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input request date">
+            <nz-date-picker id="birthday" name="birthday" formControlName="birthday"></nz-date-picker>
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber">Phone Number</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" [nzValidateStatus]="profileForm.controls['phoneNumber']"
+            nzErrorTip="Please input your phone number!">
+            <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
+               <ng-template #addOnBeforeTemplate>
+                  <nz-select formControlName="phoneNumberPrefix" class="phone-select">
+                     <nz-option nzLabel="+94" nzValue="+94"></nz-option>
+                     <nz-option nzLabel="+86" nzValue="+86"></nz-option>
+                  </nz-select>
+               </ng-template>
+               <input formControlName="phone" id="phoneNumber" nz-input />
+            </nz-input-group>
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="email">Email</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input valid email">
+            <input nz-input id="email" formControlName="email" />
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="address">Address</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24">
+            <input nz-input id="address" formControlName="address" />
+         </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item nz-row class="register-area">
+         <nz-form-control [nzSpan]="14" [nzOffset]="6">
+            <button nz-button nzType="primary" type="submit">Save</button>
+            <button nz-button nzType="default" [routerLink]="['/dashboard']">Cancel</button>
+         </nz-form-control>
+      </nz-form-item>
+   </form>
+</div>

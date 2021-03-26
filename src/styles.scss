@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+.ant-table table,.ant-form-item-label label, .ant-input, .ant-btn, .ant-picker-input>input{
+   font-size: 1rem;
+}
+
+.ant-btn-sm{
+   font-size: 14px;
+}

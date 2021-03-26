@@ -1,0 +1,31 @@
+<div class="order-summary-container">
+  <h3>Order Summary</h3>
+  <div class="order-row">
+    <p>Price</p>
+    <p class="money">${{totalPrice}}</p>
+  </div>
+  <div class="order-row">
+    <p>Discount</p>
+    <p class="money">${{discount}}</p>
+  </div>
+  <div class="order-row">
+    <p>Shipping</p>
+    <p class="shipping-fee">Free</p>
+  </div>
+  <div class="order-row">
+    <p>Coupon Applied</p>
+    <p class="money">$0.00</p>
+  </div>
+  <hr />
+  <div class="order-row">
+    <strong>Total</strong>
+    <strong>${{getTotal()}}</strong>
+  </div>
+  <div class="order-row">
+    <p class="delivery-date">Estimated Delivery by <strong>{{currentDate | date:'dd LLL yyyy'}}</strong></p>
+  </div>
+  <input type="text" placeholder="Coupon Code" class="coupon-code">
+  <div>
+    <button>PROCEED TO CHECKOUT</button>
+  </div>
+</div>

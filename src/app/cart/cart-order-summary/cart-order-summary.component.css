@@ -1,0 +1,56 @@
+.order-summary-container {
+  --button-color: rgb(58, 162, 159);
+  border: solid 1px var(--grey-color);
+  margin: 0.5rem;
+  padding: 1rem;
+  width: 270px;
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem auto;
+}
+.order-row:first-of-type {
+  margin-top: 2rem;
+}
+
+.delivery-date {
+  font-size: 0.9rem;
+}
+.coupon-code {
+  padding: 0.5rem;
+  width: 100%;
+  border: solid 1px var(--grey-color);
+  border-radius: 5px;
+}
+.coupon-code:focus,
+.order-summary-container button:focus {
+  outline: 2px;
+  box-shadow: 0 0 0 0.1rem rgba(65, 67, 70, 0.25);
+}
+
+.order-summary-container button {
+  padding: 0.8rem;
+  margin: 1rem auto;
+  width: 100%;
+  font-weight: 800;
+  color: white;
+  border: solid 0px var(--button-color);
+  background-color: var(--button-color);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.1s ease;
+}
+.order-summary-container button:hover {
+  background-color: #2e7976;
+  box-shadow: 0 0 0 0.1rem rgba(22, 23, 24, 0.25);
+  transform: translatey(-3px);
+}
+
+.money {
+  font-weight: 600;
+}
+.shipping-fee {
+  color: var(--grey-color);
+}

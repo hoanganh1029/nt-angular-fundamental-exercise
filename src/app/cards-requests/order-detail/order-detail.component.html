@@ -1,0 +1,61 @@
+<div id="order-detail">
+   <form nz-form [formGroup]="orderDetailForm" (ngSubmit)="submitForm()">
+      <h1>Order detail</h1>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="subject">Subject</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input subject">
+            <input nz-input formControlName="subject" id="subject" />
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="statusName" nzRequired>Status</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input status">
+            <input nz-input id="statusName" formControlName="statusName" />
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="request-date" nzRequired>
+            <span>Request date</span>
+         </nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input request date">
+            <nz-date-picker id="request-date" name="request-date" formControlName="requestDate"></nz-date-picker>
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="last-update">
+            <span>Last update</span>
+         </nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input last update">
+            <nz-date-picker id="last-update" name="last-update" formControlName="latestUpdate"></nz-date-picker>
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber">Phone Number</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24" [nzValidateStatus]="orderDetailForm.controls['phoneNumber']"
+            nzErrorTip="Please input your phone number!">
+            <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
+               <ng-template #addOnBeforeTemplate>
+                  <nz-select formControlName="phoneNumberPrefix" class="phone-select">
+                     <nz-option nzLabel="+94" nzValue="+94"></nz-option>
+                     <nz-option nzLabel="+86" nzValue="+86"></nz-option>
+                  </nz-select>
+               </ng-template>
+               <input formControlName="phone" id="'phoneNumber'" nz-input />
+            </nz-input-group>
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="attendant">Attendant</nz-form-label>
+         <nz-form-control [nzSm]="14" [nzXs]="24">
+            <input nz-input id="attendant" formControlName="attendant" />
+         </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item nz-row class="register-area">
+         <nz-form-control [nzSpan]="14" [nzOffset]="6">
+            <button nz-button nzType="primary" type="submit">Save</button>
+            <button nz-button nzType="default" [routerLink]="['/dashboard']">Cancel</button>
+         </nz-form-control>
+      </nz-form-item>
+   </form>
+</div>

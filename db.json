@@ -1,0 +1,266 @@
+{
+  "orders": [
+    {
+      "id": "1",
+      "subject": "John",
+      "requestDate": "2020-07-01",
+      "latestUpdate": "2020-07-03",
+      "statusName": "Resolved",
+      "phone": "+98 817 981 233",
+      "attendant": "Yamato"
+    },
+    {
+      "subject": "Anna Legid",
+      "statusName": "Active",
+      "requestDate": "2020-03-02T00:00:00.000Z",
+      "latestUpdate": "2020-07-05",
+      "phoneNumberPrefix": [
+        "+94"
+      ],
+      "phone": "+87 123 212 1290",
+      "attendant": "Nico Robin ",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "subject": "Michale",
+      "requestDate": "2020-07-03",
+      "latestUpdate": "2020-07-09",
+      "statusName": "Pause",
+      "phone": "+94 820 012 007",
+      "attendant": "Nami"
+    },
+    {
+      "id": "4",
+      "subject": "Brick",
+      "requestDate": "2020-06-20",
+      "latestUpdate": "2020-06-25",
+      "statusName": "Resolved",
+      "phone": "+94 820 012 007",
+      "attendant": "Boa"
+    },
+    {
+      "id": "5",
+      "subject": "Janna",
+      "requestDate": "2020-06-18",
+      "latestUpdate": "2020-06-20",
+      "statusName": "Resolved",
+      "phone": "+87 123 212 1290",
+      "attendant": "Monet"
+    },
+    {
+      "id": "6",
+      "subject": "Warwick",
+      "requestDate": "2020-06-17",
+      "latestUpdate": "2020-06-18",
+      "statusName": "Pause",
+      "phone": "+98 817 981 233",
+      "attendant": "Hina"
+    },
+    {
+      "id": "7",
+      "subject": "Mike",
+      "requestDate": "2020-06-10",
+      "latestUpdate": "2020-06-15",
+      "statusName": "Pause",
+      "phone": "+94 820 012 007",
+      "attendant": "Velvet"
+    },
+    {
+      "id": "8",
+      "subject": "John",
+      "requestDate": "2020-07-01",
+      "latestUpdate": "2020-07-03",
+      "statusName": "Resolved",
+      "phone": "+94 820 012 006",
+      "attendant": "Reck"
+    },
+    {
+      "id": "9",
+      "subject": "Anna",
+      "requestDate": "2020-07-02",
+      "latestUpdate": "2020-07-05",
+      "statusName": "Active",
+      "phone": "+94 820 012 014",
+      "attendant": "Linken"
+    },
+    {
+      "id": "10",
+      "subject": "Michale",
+      "requestDate": "2020-07-03",
+      "latestUpdate": "2020-07-09",
+      "statusName": "Pause",
+      "phone": "+94 820 002 019",
+      "attendant": "Alfred"
+    }
+  ],
+  "orderDetail": [
+    {
+      "id": "1",
+      "subject": "John",
+      "requestDate": "2020-07-01",
+      "latestUpdate": "2020-07-03",
+      "statusName": "Resolved",
+      "profileId": "c001",
+      "avatar": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/21760012/original/d4c0c142f91f012c9a8a9c9aeef3bac28036f15b/create-your-cartoon-style-flat-avatar-or-icon.jpg",
+      "name": "John Smith",
+      "title": "Junior",
+      "role": "Guest",
+      "age": 20,
+      "email": "john@gmail.com",
+      "phone": "+98 817 981 233",
+      "attendant": "Yamato"
+    },
+    {
+      "id": "2",
+      "subject": "Anna",
+      "requestDate": "2020-07-02",
+      "latestUpdate": "2020-07-05",
+      "statusName": "Active",
+      "profileId": "c002",
+      "avatar": "https://st2.depositphotos.com/4967775/11323/v/950/depositphotos_113235752-stock-illustration-avatar-girls-icon-vector-woman.jpg",
+      "name": "Anna Widow",
+      "title": "Senior",
+      "role": "Guest",
+      "age": 22,
+      "email": "Anna@outlook.com",
+      "phone": "+87 123 212 1290",
+      "attendant": "Robin"
+    },
+    {
+      "id": "3",
+      "subject": "Michale",
+      "requestDate": "2020-07-03",
+      "latestUpdate": "2020-07-09",
+      "statusName": "Pause",
+      "profileId": "c003",
+      "avatar": "https://pluspng.com/img-png/ironman-png-800.png",
+      "name": "Tony Stark",
+      "title": "Manager",
+      "role": "Admin",
+      "age": 27,
+      "email": "michale@yahoo.com",
+      "phone": "+94 820 012 007",
+      "attendant": "Nami"
+    },
+    {
+      "id": "4",
+      "subject": "Brick",
+      "requestDate": "2020-06-20",
+      "latestUpdate": "2020-06-25",
+      "statusName": "Resolved",
+      "profileId": "c003",
+      "avatar": "https://pluspng.com/img-png/ironman-png-800.png",
+      "name": "Tony Stark",
+      "title": "Manager",
+      "role": "Admin",
+      "age": 27,
+      "email": "michale@yahoo.com",
+      "phone": "+94 820 012 007",
+      "attendant": "Boa"
+    },
+    {
+      "id": "5",
+      "subject": "Janna",
+      "requestDate": "2020-06-18",
+      "latestUpdate": "2020-06-20",
+      "statusName": "Resolved",
+      "profileId": "c002",
+      "avatar": "https://st2.depositphotos.com/4967775/11323/v/950/depositphotos_113235752-stock-illustration-avatar-girls-icon-vector-woman.jpg",
+      "name": "Anna Widow",
+      "title": "Senior",
+      "role": "Guest",
+      "age": 22,
+      "email": "Anna@outlook.com",
+      "phone": "+87 123 212 1290",
+      "attendant": "Monet"
+    },
+    {
+      "id": "6",
+      "subject": "Warwick",
+      "requestDate": "2020-06-17",
+      "latestUpdate": "2020-06-18",
+      "statusName": "Pause",
+      "profileId": "c001",
+      "avatar": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/21760012/original/d4c0c142f91f012c9a8a9c9aeef3bac28036f15b/create-your-cartoon-style-flat-avatar-or-icon.jpg",
+      "name": "John Smith",
+      "title": "Junior",
+      "role": "Guest",
+      "age": 20,
+      "email": "john@gmail.com",
+      "phone": "+98 817 981 233",
+      "attendant": "Hina"
+    },
+    {
+      "id": "7",
+      "subject": "Mike",
+      "requestDate": "2020-06-10",
+      "latestUpdate": "2020-06-15",
+      "statusName": "Pause",
+      "profileId": "c003",
+      "avatar": "https://pluspng.com/img-png/ironman-png-800.png",
+      "name": "Tony Stark",
+      "title": "Manager",
+      "role": "Admin",
+      "age": 27,
+      "email": "michale@yahoo.com",
+      "phone": "+94 820 012 007",
+      "attendant": "Velvet"
+    }
+  ],
+  "cards": [
+    {
+      "quantity": 1234,
+      "name": "Resolved ticket",
+      "iconType": "mail"
+    },
+    {
+      "quantity": 15,
+      "name": "Average response",
+      "iconType": "message"
+    },
+    {
+      "quantity": 4.32,
+      "name": "Median NPS",
+      "iconType": "calendar"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "c001",
+      "name": "John Smith",
+      "avatar": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/21760012/original/d4c0c142f91f012c9a8a9c9aeef3bac28036f15b/create-your-cartoon-style-flat-avatar-or-icon.jpg",
+      "title": "Director",
+      "role": "Guest",
+      "birthday": "12-02-2000",
+      "experience": 1,
+      "email": "john@gmail.com",
+      "phone": "+98 817 981 233",
+      "address": "Birminghma"
+    },
+    {
+      "id": "c002",
+      "name": "Anna Widow",
+      "avatar": "https://st2.depositphotos.com/4967775/11323/v/950/depositphotos_113235752-stock-illustration-avatar-girls-icon-vector-woman.jpg",
+      "title": "Employee",
+      "role": "Developer",
+      "birthday": "02-03-1998",
+      "experience": 3,
+      "email": "Anna@outlook.com",
+      "phone": "+87 123 212 1290",
+      "address": "Manchester City"
+    },
+    {
+      "id": "c003",
+      "name": "Tony Stark",
+      "avatar": "https://pluspng.com/img-png/ironman-png-800.png",
+      "title": "CEO Billionare",
+      "role": "Administrator",
+      "birthday": "09-03-1993",
+      "experience": 7,
+      "email": "michale@yahoo.com",
+      "phone": "+94 820 012 007",
+      "address": "New York"
+    }
+  ]
+}

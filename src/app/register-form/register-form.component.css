@@ -1,0 +1,118 @@
+#register {
+  font-family: "Poppins", sans-serif;
+  font-size  : 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color      : #f3f3f3;
+  padding-top: 20px;
+}
+
+#register::before {
+  content : "";
+  position: fixed;
+  top     : 0;
+  left    : 0;
+  z-index : -1;
+  width   : 100%;
+  height  : 100%;
+  background: linear-gradient(45deg,
+      rgba(58, 58, 158, 0.4),
+      rgba(136, 136, 206, 0.7),
+      rgba(255, 99, 71, 0.6)),
+    url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg');
+  background-repeat  : no-repeat;
+  background-position: center;
+  background-size    : cover;
+}
+
+header {
+  text-align: center;
+}
+
+#title {
+  margin-bottom: 0.5rem;
+  font-weight  : 600;
+}
+
+#description {
+  font-style: italic;
+  margin-top: 0;
+  font-size : 1.125rem;
+  color     : grey;
+}
+
+#register-form {
+  background-color: rgb(39, 39, 69, 0.7);
+  margin          : 40px 10%;
+  padding         : 10px 20px;
+  border-radius   : 10px;
+}
+
+.form-group {
+  margin: 30px 5%;
+}
+
+label {
+  display    : flex;
+  align-items: center;
+  font-size  : 1.125rem;
+  margin     : 5px 0px;
+}
+
+.form-control {
+  border       : 1px solid #ced4da;
+  border-radius: 5px;
+  width        : 100%;
+  height       : 2.375rem;
+  padding      : 0.3rem;
+  color        : #495057;
+  font-family  : inherit;
+  font-size    : inherit;
+  line-height  : inherit;
+  transition   : border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline     : 2px;
+  box-shadow  : 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin    : auto 0.6rem;
+  min-height: 1.25rem;
+  min-width : 1.25rem;
+}
+
+.text-area {
+  min-height    : 7.5rem;
+  vertical-align: top;
+}
+
+.invalid-input {
+  color     : rgb(233, 150, 150);
+  font-style: italic;
+}
+
+.button-submit {
+  margin-top      : 1.5rem;
+  height          : 40px;
+  background-color: #37af65;
+  border-color    : #37af65;
+  cursor          : pointer;
+  color           : inherit;
+}
+
+@media (min-width: 1000px) {
+  #register-form {
+    max-width: 770px;
+    margin   : 40px auto;
+  }
+}
+
+@media (max-width: 450px) {
+  #register-form {
+    margin: 10px 0px;
+  }
+}

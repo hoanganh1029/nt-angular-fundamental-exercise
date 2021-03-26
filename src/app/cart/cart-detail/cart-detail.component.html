@@ -1,0 +1,14 @@
+<div class='cart-detail-container'>
+  <img class='product-image' src={{product.image}} alt="" />
+  <div class="product-info">
+    <h3>{{product.name}}</h3>
+    <p><span class="color-title">Color </span>{{product.color}}</p>
+    <div class="quantity-container">
+      <quantity-input [quantity]="product.quantity" (changeQuantity)="updateProductQuantity($event)"></quantity-input>
+      <button  class="btn-remove" (click)="onRemoveProduct()">REMOVE</button>
+    </div>
+  </div>
+  <div class="price">
+    <h3> ${{product.price * product.quantity}}</h3>
+  </div>
+</div>
