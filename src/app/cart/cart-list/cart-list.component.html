@@ -1,10 +1,6 @@
 <h2>Cart <span class="quantity-items">{{products.length}} ITEMS</span></h2>
 <div *ngFor="let product of products;index as index; last as last">
-  <cart-detail
-    [product]="product"
-    (updateAmount)="onUpdateTotalPrice($event)"
-    (removeProduct)="removeProduct($event)"
-  >
+  <cart-detail [product]="product" (updateAmount)="onUpdateTotalPrice($event)" (removeProduct)="removeProduct($event)">
   </cart-detail>
   <hr *ngIf="!last" />
 </div>
