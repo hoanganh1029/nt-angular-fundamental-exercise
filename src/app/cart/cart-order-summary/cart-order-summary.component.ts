@@ -9,7 +9,7 @@ export class CartOrderSummaryComponent {
   @Input() totalPrice: number = 0;
   currentDate: Date = new Date();
   discount: number = 0;
-  constructor() {}
+  constructor() { }
 
   ngOnChanges() {
     const totalDiscount = this.totalPrice >= 150 ? 0.1 * this.totalPrice : 0;
