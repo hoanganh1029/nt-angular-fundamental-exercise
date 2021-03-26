@@ -9,7 +9,7 @@ import { ProfileService } from 'src/services/profile.service';
 })
 export class ProfileComponent implements OnInit {
   profileId: string = "c003";
-  profile!: Profile;
+  profile: Profile | null = null;
   @Output() onCloseProfile = new EventEmitter();
 
   constructor(private profileService: ProfileService) { }

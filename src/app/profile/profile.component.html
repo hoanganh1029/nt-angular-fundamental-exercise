@@ -1,9 +1,9 @@
-<div id="profile">
+<div id="profile" *ngIf="profile">
    <button nzType="default" id="btn-close" (click)="closeProfile()">
       <i nz-icon nzType="close" nzTheme="outline"></i>
    </button>
    <div id="common-info">
-      <img src="{{profile.avatar}}" alt="avatar">
+      <img [src]="profile.avatar" alt="avatar">
       <h2>{{profile.name}}</h2>
       <p>{{profile.title}}</p>
       <div>

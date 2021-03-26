@@ -9,7 +9,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { RegisterReactiveFormComponent } from './register-reactive-form/register-reactive-form.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/order/1', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'order/:id', component: OrderDetailComponent },
   { path: 'register-reactive', component: RegisterReactiveFormComponent },

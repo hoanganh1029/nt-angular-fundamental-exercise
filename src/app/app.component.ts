@@ -7,10 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Final Excercise';
-  isShowProfile: boolean=true;
-  
-  toggleProfile(isShowProfile: boolean):void{
-    console.log(isShowProfile);
+  isShowProfile: boolean = true;
+
+  toggleProfile(isShowProfile: boolean): void {
     this.isShowProfile = isShowProfile;
   }
 }
